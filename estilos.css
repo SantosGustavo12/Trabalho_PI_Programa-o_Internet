@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #2c6e49; /* Verde mais escuro */
+    --secondary-color: #d9534f; /* Tom de vermelho para remoção */
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --container-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    /* Centraliza o container na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--container-bg);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.header-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(44, 110, 73, 0.2);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #388e3c; /* Verde mais claro no hover */
+    transform: translateY(-2px);
+}
+
+.display-section {
+    margin-top: 40px;
+}
+
+.saldo-container, .filtro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#saldo-total {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+#lista-despesas {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.despesa-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.despesa-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.despesa-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.despesa-info .descricao {
+    font-weight: 500;
+}
+
+.despesa-info .categoria {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.despesa-valor {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+}
+
+.btn-remover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-remover:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
